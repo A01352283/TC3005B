@@ -12,7 +12,9 @@ BOT_NAME = "tareaScraping"
 SPIDER_MODULES = ["tareaScraping.spiders"]
 NEWSPIDER_MODULE = "tareaScraping.spiders"
 
-ITEM_PIPELINES = {'tareaScraping.pipelines.TareascrapingPipeline': 300}
+ITEM_PIPELINES = {
+    'tareaScraping.pipelines.JsonPipeline': 300,
+}
 FEED_FORMAT = 'json'
 FEED_URI = 'output.json'
 
@@ -21,6 +23,15 @@ FEED_URI = 'output.json'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+
+# Playwright settings
+
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

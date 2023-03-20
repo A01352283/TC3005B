@@ -1,0 +1,1 @@
+Scrapy playwright install instructions: https://scrapeops.io/python-scrapy-playbook/scrapy-playwright/
