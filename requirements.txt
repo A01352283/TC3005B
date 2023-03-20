@@ -17,7 +17,7 @@ exceptiongroup==1.1.1
 filelock @ file:///croot/filelock_1672387128942/work
 flit_core @ file:///croot/flit-core_1679397103445/work/source/flit_core
 fonttools==4.25.0
-greenlet==2.0.2
+greenlet==2.0.1
 h11==0.14.0
 hyperlink @ file:///tmp/build/80754af9/hyperlink_1610130746837/work
 idna @ file:///croot/idna_1666125576474/work
@@ -40,12 +40,14 @@ packaging @ file:///tmp/build/80754af9/packaging_1637314298585/work
 pandas==1.4.4
 parsel @ file:///tmp/build/80754af9/parsel_1646739959912/work
 Pillow==9.2.0
+playwright==1.32.1
 ply==3.11
 Protego @ file:///tmp/build/80754af9/protego_1598657180827/work
 pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
 pyasn1-modules==0.2.8
 pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
 PyDispatcher==2.0.5
+pyee==9.0.4
 PyHamcrest @ file:///tmp/build/80754af9/pyhamcrest_1615748656804/work
 pynvim==0.4.3
 pyOpenSSL @ file:///croot/pyopenssl_1677607685877/work
@@ -59,7 +61,7 @@ requests @ file:///croot/requests_1678709721434/work
 requests-file @ file:///Users/ktietz/demo/mc3/conda-bld/requests-file_1629455781986/work
 scipy @ file:///opt/conda/conda-bld/scipy_1661390393401/work
 Scrapy @ file:///croot/scrapy_1677738182270/work
-scrapy-selenium==0.0.7
+scrapy-playwright==0.0.26
 seaborn @ file:///tmp/build/80754af9/seaborn_1629307859561/work
 selenium==4.8.3
 service-identity @ file:///Users/ktietz/demo/mc3/conda-bld/service_identity_1629460757137/work
