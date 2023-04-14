@@ -1,0 +1,11 @@
+name: DataSciGeneral
+channels:
+  - defaults
+dependencies:
+  - pandas
+  - matplotlib
+  - seaborn
+  - beautifulsoup4
+  - requests
+  - scrapy
+prefix: /home/andres/miniconda3/envs/DataSciGeneral
