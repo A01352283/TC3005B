@@ -8,4 +8,7 @@ dependencies:
   - beautifulsoup4
   - requests
   - scrapy
+  - pip:
+    - -r requirements.txt
+
 prefix: /home/andres/miniconda3/envs/DataSciGeneral
