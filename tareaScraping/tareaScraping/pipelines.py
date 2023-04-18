@@ -7,14 +7,9 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
-
-class TareascrapingPipeline:
-    def process_item(self, item, spider):
-        return item
-
 import json
 
-class CarsPipeline:
+class TareascrapingPipeline:
     def process_item(self, item, spider):
         # Convert item to dictionary
         item_dict = dict(item)
@@ -22,5 +17,4 @@ class CarsPipeline:
         # Process and store data
         with open('output.json', 'a') as f:
             f.write(json.dumps(item_dict) + '\n')
-
         return item

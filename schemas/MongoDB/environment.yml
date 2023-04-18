@@ -1,0 +1,8 @@
+name: mongo
+channels:
+  - defaults
+dependencies:
+  - pymongo
+  - dnspython
+  - pandas
+prefix: /home/andres/miniconda3/envs/mongo

@@ -12,7 +12,7 @@ BOT_NAME = "tareaScraping"
 SPIDER_MODULES = ["tareaScraping.spiders"]
 NEWSPIDER_MODULE = "tareaScraping.spiders"
 
-ITEM_PIPELINES = {'tareaScraping.pipelines.CarsPipeline': 300}
+ITEM_PIPELINES = {'tareaScraping.pipelines.TareascrapingPipeline': 300}
 FEED_FORMAT = 'json'
 FEED_URI = 'output.json'
 

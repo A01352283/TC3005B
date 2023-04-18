@@ -1,4 +1,5 @@
 import scrapy
+import json
 
 
 class KavakspiderSpider(scrapy.Spider):
@@ -9,13 +10,17 @@ class KavakspiderSpider(scrapy.Spider):
     def parse(self, response):
         # Extract links to product pages
         # Extract the link from the <a> tag with class "card"
-        product_links = response.css('.card::attr(href)').extract()
+        product_links = response.css('a.card::attr(href)').getall()
 
+        data = {'urls': product_links}
+        
+        yield data
+        
         # Follow each product link and parse the product page
-        for product_link in product_links:
-            yield response.follow(product_link, callback=self.parse_product)
+        """ for product_link in product_links:
+            yield response.follow(product_link, callback=self.parse_product) """
 
-    def parse_product(self, response):
+    """ def parse_product(self, response):
         # Extract data from the product page
         data = {}
         data['title'] = response.css('.product-title::text').get()
@@ -23,4 +28,4 @@ class KavakspiderSpider(scrapy.Spider):
         data['litres'] = response.css('.feature:contains("Litres") + .feature-value::text').get()
         data['transmission'] = response.css('.feature:contains("Transmission") + .feature-value::text').get()
 
-        yield data
+        yield data """
