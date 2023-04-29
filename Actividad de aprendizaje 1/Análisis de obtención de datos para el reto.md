@@ -3,7 +3,7 @@
 Grupo 501
 ## Conjuntos de datos
 
-**Primer conjunto**:
+### **Primer conjunto**:
 
 Enlace: https://data.world/vizwiz/car-sales-mock-data/workspace/file?filename=Cars+Mock+Data.csv
 
@@ -18,7 +18,7 @@ En cuanto a la implementación de los datos encontrados al modelo no relacional 
 Concluyendo con este primer conjunto de datos, el archivo encontrado nos da la oportunidad de explorar qué otro tipo de información sería relevante para las agencias, es este tipo de perspectiva que nos va a permitir generar gráficas y análisis relevantes para nuestros clientes de grupos automotrices. Puede que no utilicemos los mismos campos, pero si podemos obtener y presentar posteriormente un contexto que brinde valor a la plataforma y al cliente.
 
 
-**Segundo conjunto**:
+### **Segundo conjunto**:
 
 Enlace: 
 https://deepvisualmarketing.github.io/
@@ -37,7 +37,7 @@ Hay una seccion especifica que concierne a enlaces de fotografías de los autos,
 
 En conclusión, es bueno confirmar con este conjunto que los campos que estamos guardando en cuanto a la descripción del auto son los adecuados, además nos permitió considerar utilizar más campos para todo tipo de autos. Y de la misma manera que el conjunto anterior, nos da una perspectiva hacia lo que podría ser el manejo de datos de la plataforma en un futuro, específicamente con los enlaces a fotografías, que podrían extenderse a ser cientos de miles algún día.
 
-**Desarrollo de conjunto de datos dummy/prueba**:
+### **Desarrollo de conjunto de datos dummy/prueba**:
 
 En cuanto a crear nuestro propio conjunto de datos de prueba, exploramos varios métodos, entre ellos la creación de un programa en python que generará listas de datos aleatorios dentro de ciertos parámetros. De la misma manera se exploró el uso de herramientas externas como Chat GPT, del cual se pedía una muestra pequeña de 10 o 100 entradas de algún campo que estuviéramos considerando en el modelo de datos.
 
@@ -55,7 +55,7 @@ Es importante partir de esta base para después extender este conjunto a las pru
 En conclusión, esta etapa sirvió mucho para tener una base de datos de prueba y un fundamento para continuar el desarrollo de la plataforma. El conteo final de entradas o registros creados es de 10,000, alcanzando los criterios descritos de la actividad.
 
 
-**Conjunto obtenido por scraping**:
+### **Conjunto obtenido por scraping**:
 
 Para este caso, se decidió hacer el web scraping usando la herramienta de Scrapy con la integración de scrapy_playwright, gracias a la flexibilidad y robustez que nos ofrece. La manera principal en la que lo aprovechamos fue por medio de la interacción con headless browsers, pues las tarjetas de los autos no cargaban de manera completa, también interactuando con el sitio, pues ciertos elementos solamente cargaban al dar click en un “acordeón”.
 
