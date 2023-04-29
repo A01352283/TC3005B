@@ -1,0 +1,46 @@
+marca,modelo,año,precio,transmisión,rendimiento,combustible,litros,url
+ Hyundai , Elantra ,2018," 282,999 ",Automático,17.5,,,https://www.kavak.com/mx/usado/hyundai-elantra-gls-sedan-2018?id=242688
+ Volkswagen , Golf A7 ,2020," 481,999 ",Automático,17.2,,,https://www.kavak.com/mx/usado/volkswagen-golf_a7-comfortline-hatchback-2020?id=242854
+ Jeep , Patriot ,2016," 272,999 ",Manual,11.9,Gasolina,2.4,https://www.kavak.com/mx/usado/jeep-patriot-sport-suv-2016?id=243040
+ Ford , Edge ,2018," 560,999 ",Automático,8,Gasolina,2,https://www.kavak.com/mx/usado/ford-edge-titanium-suv-2018?id=243602
+ Dodge , Journey ,2017," 324,999 ",Automático,10.2,Gasolina,2.4,https://www.kavak.com/mx/usado/dodge-journey-sxt-suv-2017?id=243846
+ Toyota , Corolla ,2018,,Manual,9.4,Gasolina,1.8,https://www.kavak.com/mx/usado/toyota-corolla-s-sedan-2018?id=244051
+ Nissan , March ,2018," 222,999 ",Manual,16.1,Gasolina,1.6,https://www.kavak.com/mx/usado/nissan-march-advance-hatchback-2018?id=244216
+ Mazda , CX-5 ,2018," 424,999 ",Automático,14.7,Gasolina,2,https://www.kavak.com/mx/usado/mazda-cx_5-i_grand_touring-suv-2018?id=244223
+ Ford , Explorer ,2013," 309,999 ",Automático,9.3,Gasolina,3.5,https://www.kavak.com/mx/usado/ford-explorer-xlt-suv-2013?id=244337
+ Nissan , Versa ,2019," 234,999 ",Manual,16.4,,1.6,https://www.kavak.com/mx/usado/nissan-versa-sense-sedan-2019?id=176462
+ Mazda , CX-5 ,2018," 440,999 ",Automático,14.7,Gasolina,2,https://www.kavak.com/mx/usado/mazda-cx_5-i_grand_touring-suv-2018?id=243730
+ Nissan , Kicks ,2019," 334,999 ",Automático,16.9,Gasolina,1.6,https://www.kavak.com/mx/usado/nissan-kicks-advance-suv-2019?id=243789
+ Honda , CR-V ,2015," 306,999 ",Automático,9.7,,2.4,https://www.kavak.com/mx/usado/honda-cr_v-i_style-suv-2015?id=172537
+ Volkswagen , Tiguan ,2014," 238,999 ",Automático,14.9,,1.4,https://www.kavak.com/mx/usado/volkswagen-tiguan-trendline-suv-2014?id=189432
+ Mercedes Benz , Clase B ,2014," 234,999 ",Automático,12,,1.6,https://www.kavak.com/mx/usado/mercedes_benz-clase_b-b_180_cgi_exclusive-wagon-2014?id=204341
+ Mazda , Mazda 2 ,2017," 269,999 ",Automático,5.4,,1.5,https://www.kavak.com/mx/usado/mazda-mazda_2-i_touring_hatchback-hatchback-2017?id=204655
+ Bmw , Serie 4 ,2020," 713,999 ",Automático,12.8,,2,https://www.kavak.com/mx/usado/bmw-serie_4-420i_sport_line_gran_coup%C3%A9_sedan-sedan-2020?id=210690
+ Honda , Civic ,2016," 312,999 ",Automático,17.5,,1.5,https://www.kavak.com/mx/usado/honda-civic-turbo_plus_sedan-sedan-2016?id=230360
+ Volkswagen , Polo ,2018," 225,999 ",Manual,14.3,,,https://www.kavak.com/mx/usado/volkswagen-polo-sound-hatchback-2018?id=236479
+ Chevrolet , Equinox ,2016," 294,999 ",Automático,9.3,,,https://www.kavak.com/mx/usado/chevrolet-equinox-ltz-suv-2016?id=240053
+marca,modelo,año,precio,transmisión,rendimiento,combustible,litros
+ Hyundai , Tucson ,2018," 367,999 ",Automático,14.5,,
+ Kia , Seltos ,2020," 400,999 ",Automático,14.6,,
+ Mazda , CX-5 ,2019," 515,999 ",Automático,11.8,,
+ Nissan , Versa ,2019," 264,999 ",Automático,18.2,,
+ Chevrolet , Aveo ,2020," 247,999 ",Manual,5.7,,
+ Nissan , March ,2021," 312,999 ",Automático,15.2,,
+ Nissan , Versa ,2020," 233,999 ",Manual,15.9,Gasolina,1.6
+ Mini , Cooper S ,2015," 313,999 ",Automático,13.3,Gasolina,2
+ Audi , Q3 Quattro ,2015," 357,999 ",Automático,12.7,Gasolina,2
+ Volkswagen , Polo ,2020," 288,999 ",Manual,15.2,Gasolina,1.6
+ Mazda , MX-5 ,2019," 399,999 ",Manual,13.5,Gasolina,2
+ Hyundai , Tucson ,2018," 407,999 ",Automático,14.5,Gasolina,2
+ Jeep , Grand Cherokee ,2017," 747,999 ",Automático,7,Gasolina,5.7
+ Jeep , Cherokee ,2018," 543,999 ",Automático,9.3,Gasolina,3.2
+ Ford , Escape ,2016," 286,999 ",Automático,9.8,Gasolina,2.5
+ Mazda , CX-9 ,2017," 503,999 ",Automático,9.1,Gasolina,2.5
+ Seat , Ibiza ,2019," 297,999 ",Manual,15.9,,1.6
+ Dodge , Journey ,2017," 364,999 ",Automático,8.2,,3.6
+ Mazda , Mazda 3 ,2018," 336,999 ",Automático,9.8,,2.5
+ Chevrolet , Trax ,2017," 258,999 ",Automático,15.2,,1.8
+ Nissan , Kicks ,2017," 318,999 ",Automático,17.5,,1.6
+ Audi , A1 ,2014," 232,999 ",Automático,15.6,,1.4
+ Suzuki , Vitara ,2019," 348,999 ",Automático,16.1,,
+ Toyota , Hilux ,2020," 496,999 ",Manual,8.7,,
