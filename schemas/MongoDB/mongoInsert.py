@@ -11,10 +11,6 @@ db = client.AppDB
 def insert_random_automovil(numberOfCars):
     # Insert a random number of cars into the collection
     for i in range(numberOfCars):
-        # Make a set object id for agencia and fotografias
-        agencia_id = ObjectId()
-        fotografias_id = ObjectId()
-
         #Make a random pair of marca and modelo from Ford, Nissan and Toyota with actual models and brands
         marca = random.choice(["Ford", "Nissan", "Toyota"])
         modelo = ""
@@ -28,8 +24,8 @@ def insert_random_automovil(numberOfCars):
         # Randomize the price between 100000 and 1000000
         precio = random.randint(100000, 1000000)
 
-        # Randomize the year between 2010 and 2020
-        año = random.randint(2010, 2020)
+        # Randomize the year between 2010 and 2023
+        año = random.randint(2010, 2023)
 
         # Randomize the color between 5 colors (Rojo, Azul, Verde, Negro, Blanco)
         color = random.choice(["Rojo", "Azul", "Verde", "Negro", "Blanco"])
@@ -47,11 +43,12 @@ def insert_random_automovil(numberOfCars):
             "precio": precio,
             "color": color,
             "combustible": combustible,
-            "disponibilidad": True,
+            "rendimiento": rendimiento,
+            "transmisión": transmisión,
+            "cantidad": cantidad,
             "motor": motor,
-            "agencia": agencia_id,
-            "tipo_vehiculo": "Sedan",
-            "fotografias": fotografias_id
+            "tipo_vehiculo": tipo_vehículo,
+            "descripción": descripción
         })
 
         print(f"{i} documents inserted")
@@ -106,5 +103,5 @@ def insert_random_usuario_final(numberOfUsers):
             "direccion_id": direccion_id
         })
 
-insert_random_automovil(1)
+#insert_random_automovil(1)
 #insert_random_usuario_final(10000)
