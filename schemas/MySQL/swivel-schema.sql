@@ -52,8 +52,8 @@ CREATE TABLE superadmin(
 CREATE TABLE dirección(
     dirección_id INT NOT NULL AUTO_INCREMENT,
     calle VARCHAR(254) NOT NULL,
-    número_interior VARCHAR(15) NOT NULL,
     número_exterior VARCHAR(15) NOT NULL,
+    número_interior VARCHAR(15),
     ciudad VARCHAR(32) NOT NULL,
     estado VARCHAR(32) NOT NULL,
     país VARCHAR(64) NOT NULL,
