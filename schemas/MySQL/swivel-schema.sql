@@ -46,7 +46,7 @@ CREATE TABLE superadmin(
     apellidos VARCHAR(254) NOT NULL,
     email VARCHAR(254) NOT NULL,
     contraseña VARCHAR(254) NOT NULL,
-    PRIMARY KEY (admin_id)
+    PRIMARY KEY (superadmin_id)
 );
 
 CREATE TABLE dirección(
@@ -93,7 +93,7 @@ CREATE TABLE documentos(
     documentos_id INT NOT NULL AUTO_INCREMENT,
     usuario_final_id INT NOT NULL REFERENCES usuario_final(usuario_final_id),
     nombre_documento VARCHAR(254) NOT NULL,
-    url_documento VARCHAR(65532) NOT NULL,
+    url_documento TEXT NOT NULL,
     PRIMARY KEY (documentos_id)
 );
 
