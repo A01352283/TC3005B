@@ -24,7 +24,7 @@ INSERT INTO datos_usuario (nombres, apellidos, email, contraseña, número_telef
     ('Luis', 'Hernández', 'luishernandez@mail.com', 'df209a6171fc2d1c69f38b0f586c67c92a83df50', '5551112233', 0, 'abcd1234efgh5678ijkl9012mnop3456', NULL),
     ('Ana', 'Martínez', 'anamartinez@mail.com', 'kVbO6lBNNIzBua6LdU6zguu1jUZV7MNkP76JFVfMJSI6oJux6UdxW', '5555555555', 1, NULL, 'Google'),
     ('Pedro', 'González', 'pedrogonzalez@mail.com', 'df209a6171fc2d1c69f38b0f586c67c92a83df50', '5557778888', 0, 'qrst1234uvwx5678yzab9012cdef3456', NULL),
-    ('Silvia', 'Romero', 'silviaromero@example.com', '4ce4e4e4b9dfe7f0a232eef5287d86e6fc6c8d96', '5556789012', false, 'pT7qRsU9fXvN3mZaB6jKl4E5wY8cD2xH', 'Google');
+    ('Silvia', 'Romero', 'silviaromero@example.com', '4ce4e4e4b9dfe7f0a232eef5287d86e6fc6c8d96', '5556789012', false, '', 'Google');
 
 -- Inserts para datos_lugar
 INSERT INTO datos_lugar (nombre, email, contraseña, número_telefónico) VALUES
@@ -59,7 +59,7 @@ INSERT INTO datos_lugar (nombre, email, contraseña, número_telefónico) VALUES
     ("Car Avenue", "sales@caravenue.com", "d41d8cd98f00b204e9800998ecf8427e", "5557771234");
 
 -- Inserts para dirección
-INSERT INTO dirección (calle, número_interior, número_exterior, ciudad, estado, país, código_postal)VALUES
+INSERT INTO dirección (calle, número_interior, número_exterior, ciudad, estado, país, código_postal) VALUES
     ('Calle Hidalgo', '23', '12', 'Ciudad de México', 'Ciudad de México', 'México', '06500'),
     ('Avenida Juárez', '205', '19', 'Puebla', 'Puebla', 'México', '72000'),
     ('Boulevard Francisco Villa', '1015', '23', 'León', 'Guanajuato', 'México', '37260'),
@@ -70,16 +70,16 @@ INSERT INTO dirección (calle, número_interior, número_exterior, ciudad, estad
     ('Avenida Benito Juárez', '570', '11', 'Monterrey', 'Nuevo León', 'México', '64000'),
     ('Calle Miguel Hidalgo', '90', '32', 'Cancún', 'Quintana Roo', 'México', '77500'),
     ('Avenida de la Reforma', '105', '25', 'México', 'Ciudad de México', 'México', '06600'),
-    ('Av. México', '150', 'A', 'Monterrey', 'Nuevo León', 'México', '64100'),
-    ('Calle Durango', '12', '', 'Tijuana', 'Baja California', 'México', '22040'),
-    ('Av. Revolución', '1455', '', 'Ciudad de México', 'Ciudad de México', 'México', '01090'),
-    ('Calle Reforma', '125', '', 'Puebla', 'Puebla', 'México', '72000'),
-    ('Av. Hidalgo', '350', 'C', 'Guadalajara', 'Jalisco', 'México', '44100'),
-    ('Calle Victoria', '25', 'B', 'Mérida', 'Yucatán', 'México', '97000'),
-    ('Av. Insurgentes', '1300', '', 'Toluca', 'Estado de México', 'México', '50020'),
-    ('Calle Independencia', '75', 'A', 'Aguascalientes', 'Aguascalientes', 'México', '20040'),
-    ('Av. Juárez', '500', '', 'Querétaro', 'Querétaro', 'México', '76000'),
-    ('Calle Guerrero', '28', 'B', 'Oaxaca de Juárez', 'Oaxaca', 'México', '68000');
+    ('Av. México', 'A', '150', 'Monterrey', 'Nuevo León', 'México', '64100'),
+    ('Calle Durango', '', '12', 'Tijuana', 'Baja California', 'México', '22040'),
+    ('Av. Revolución', '', '1455', 'Ciudad de México', 'Ciudad de México', 'México', '01090'),
+    ('Calle Reforma', '', '125', 'Puebla', 'Puebla', 'México', '72000'),
+    ('Av. Hidalgo', 'C', '350', 'Guadalajara', 'Jalisco', 'México', '44100'),
+    ('Calle Victoria', 'B', '25', 'Mérida', 'Yucatán', 'México', '97000'),
+    ('Av. Insurgentes', '', '1300', 'Toluca', 'Estado de México', 'México', '50020'),
+    ('Calle Independencia', 'A', '75', 'Aguascalientes', 'Aguascalientes', 'México', '20040'),
+    ('Av. Juárez', '', '500', 'Querétaro', 'Querétaro', 'México', '76000'),
+    ('Calle Guerrero', 'B', '28', 'Oaxaca de Juárez', 'Oaxaca', 'México', '68000');
 
 -- Inserts para automovil
 INSERT INTO automovil (agencia_id, marca, modelo, año, precio, color, combustible, autonomía, transmisión, cantidad, motor, tipo_vehículo, descripción) VALUES
