@@ -1,0 +1,87 @@
+{
+  "marca": "Kia",
+  "modelo": "Forte",
+  "año": "2019",
+  "precio": 350000.00,
+  "cantidad": 3,
+  "disponible_prueba": "true",
+  "visible_catalogo": "true",
+  "combustible": "Gasolina",
+  "motor": "4 Cilindros",
+  "tipo_vehiculo": "Sedán",
+  "transmision": "Automática",
+  "rendimiento": "30km/l",
+  "pasajeros": 5,
+  "estado_agencia": "CDMX",
+  "nombre_agencia": "Kia Cuajimalpa",
+  "municipio_agencia": "Cuajimalpa",
+  "direccion_agencia": "Prol. Paseo de la Reforma 1130, Lomas de Santa Fe, Contadero, Cuajimalpa de Morelos, 05300 Ciudad de México, CDMX",
+  "color_interior": "Negro",
+  "colores": [
+    {
+      "nombre": "Azul Metalico",
+      "valor_hexadecimal": "#3d5882",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_655018-MLM53782975871_022023-O.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_883943-MLM54171070901_032023-O.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_966248-MLM53887407193_022023-O.jpg"
+      ]
+    },
+    {
+      "nombre": "Gris Metalico",
+      "valor_hexadecimal": "#6a717a",
+      "imagenes": [
+        "https://http2.mlstatic.com/D_NQ_NP_727222-MLM68985664992_042023-O.jpg",
+        "https://cars.usnews.com/static/images/Auto/izmo/Colors/kia_19forteexsd3a_gravitygrey.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_621812-MLM54693193365_032023-O.jpg"
+      ]
+    }
+  ],
+  "caracteristicas": [
+    "Tecnología Bluetooth",
+    "Aire Acondicionado",
+    "Calefacción",
+    "Frenos ABS",
+    "Muy rápido fiuuuuummmm",
+    "Sistema de Navegación"
+  ],
+  "extras": [
+    {
+      "titulo": "Rines de Hierro",
+      "precio": 5000.00,
+      "descripcion": "Unos bellos rines pero de hierro"
+    },
+    {
+      "titulo": "Television",
+      "precio": 7000.00,
+      "descripcion": "Ponle una tele"
+    }
+  ],
+  "enganche": [10, 20, 30, 40, 50],
+  "plazo": {
+    "12": 5.7,
+    "24": 5.8,
+    "36": 6.0,
+    "48": 6.2,
+    "60": 6.6
+  },
+  "entrega": [
+    {
+      "nombre": "domicilio",
+      "precio": 12000.00,
+      "descripcion": "Te lo llevamos a la puerta de tu casa"
+    },
+    {
+      "nombre": "Recoger en Agecia",
+      "precio": 0.00,
+      "descripcion": "Recoge tu auto en la agencia GRATIS"
+    }
+  ],
+  "fotos_3d": [
+    "https://http2.mlstatic.com/D_NQ_NP_655018-MLM53782975871_022023-O.jpg",
+    "https://http2.mlstatic.com/D_NQ_NP_883943-MLM54171070901_032023-O.jpg",
+    "https://http2.mlstatic.com/D_NQ_NP_966248-MLM53887407193_022023-O.jpg"
+  ],
+  "ficha_tecnica": "https://github.com/SFMBa01029956/TC3005B.501",
+  "descripcion": "El Kia Forte 2019 es un sedán elegante y moderno que ofrece un rendimiento excepcional y una experiencia de conducción gratificante. Este vehículo, disponible en la agencia Kia Cuajimalpa ubicada en Cuajimalpa, Ciudad de México, es una opción atractiva para aquellos que buscan comodidad, estilo y tecnología a un precio asequible. Con un diseño aerodinámico y líneas dinámicas, el Kia Forte se destaca en la carretera. Disponible en dos atractivos colores, Azul Metálico y Gris Metálico, este sedán luce impresionante desde cualquier ángulo. Su interior presenta un elegante acabado en negro, creando un ambiente sofisticado y refinado para los pasajeros. El Kia Forte 2019 cuenta con un motor de 4 cilindros y transmisión automática, lo que garantiza un rendimiento suave y eficiente. Con un rendimiento de hasta 30 km/l, este vehículo es altamente eficiente en términos de consumo de combustible, lo que lo convierte en una excelente opción para aquellos que buscan ahorrar en costos de combustible. En cuanto a características y tecnología, el Kia Forte no decepciona. Viene equipado con tecnología Bluetooth, sistema de navegación, aire acondicionado y calefacción. Además, cuenta con frenos ABS para una conducción segura y confiable. El Kia Forte 2019 ofrece algunos extras opcionales para personalizar tu experiencia de conducción, como rines de hierro y una televisión. Estos extras tienen un costo adicional, pero brindan aún más comodidad y estilo al vehículo. En términos de financiamiento, el Kia Forte 2019 ofrece varias opciones de enganche y plazos. Puedes elegir un enganche que se ajuste a tu presupuesto, y el plazo puede variar desde 12 hasta 60 meses, con tasas de interés competitivas. Si estás interesado en adquirir este vehículo, la agencia Kia Cuajimalpa ofrece la opción de entrega a domicilio, por un costo adicional. De esta manera, puedes recibir tu Kia Forte directamente en la puerta de tu casa, sin complicaciones. En resumen, el Kia Forte 2019 es un sedán confiable, con estilo y tecnología de vanguardia. Con su eficiencia en el consumo de combustible, comodidad y opciones de personalización, es una elección sólida para aquellos que buscan un vehículo atractivo y asequible. Para obtener más detalles técnicos, puedes consultar la ficha técnica en el siguiente enlace: ficha técnica."
+}
