@@ -2,8 +2,16 @@ import pandas as pd
 from elasticsearch import Elasticsearch
 import json
 
+from dotenv import dotenv_values
+
+# Load the environment variables
+env_vars = dotenv_values('./GenerateDummyData/.env')
+
+api_key = env_vars['API_KEY']
+cloud_id = env_vars['CLOUD_ID']
+
 # Connecting to Elasticsearch
-client = Elasticsearch(cloud_id="", http_auth=('', ""))
+client = Elasticsearch(api_key=api_key, cloud_id=cloud_id)
 
 # Reading the CSV file with explicit encoding
 df = pd.read_csv('./GenerateDummyData/conjunto32.csv')

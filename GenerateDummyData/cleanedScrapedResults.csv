@@ -1,4 +1,4 @@
-marca,modelo,año,precio,transmisión,rendimiento,combustible,litros
+marca,modelo,año,precio,transmision,rendimiento,combustible,litros
  Renault , Duster ,2019,244999.0,Manual,13.3,Gasolina,2
  Audi , Q2 ,2018,454999.0,Automático,14.9,Gasolina,1.4
  Bmw , Serie 1 ,2018,438999.0,Automático,17.9,Gasolina,1.5

@@ -5,12 +5,18 @@ def generateRandomCar():
     # Read the csv file into a pandas dataframe
     df = pd.read_csv('./GenerateDummyData/cleanedScrapedResults.csv')
     
+    #Remove the first and last character from the marca column
+    df['marca'] = df['marca'].str[1:-1]
+    #Remove the first and last character from the modelo column
+    df['modelo'] = df['modelo'].str[1:-1]
     # Based on the cells from the combustible column, pick a random motor
     df['motor'] = [pickRandomMotor(row) for row in df['combustible']]
     # Pick a random tipo de vehiculo
     df['tipo_vehiculo'] = [pickTipoVehicle() for row in range(len(df))]
     # Pick the passengers based on the tipo de vehiculo
     df['pasajeros'] = [pickPassengers(row) for row in df['tipo_vehiculo']]
+    # Set the gerente_id for all rows
+    df['gerente_id'] = '646e3b245ecacccc95b27c1e'
     # Generate a random array of colors
     df['colores'] = [generateColorArray() for row in range(len(df))]
     # Generate a random array of characteristics
@@ -24,12 +30,12 @@ def generateRandomCar():
     # Generate the photos for each car
     df['fotos_3d'] = [generate_dummy_links() for row in range(len(df))]
     # Fill the ficha_tecnica column with the following link: https://github.com/SFMBa01029956/TC3005B.501
-    df['ficha_tecnica'] = 'https://github.com/SFMBa01029956/TC3005B.501' 
+    df['ficha_tecnica'] = 'https://github.com/SFMBa01029956/TC3005B.501'
     # Generate the entrega column
     df['entrega'] = [generateEntrega() for row in range(len(df))]
 
 
-    df.to_csv('./GenerateDummyData/expandedScrapedResults.csv', index=False)
+    df.to_csv('./GenerateDummyData/newScraped.csv', index=False)
 
 
 def pickRandomMotor(motorType):
@@ -98,48 +104,47 @@ def pickPassengers(tipo_vehiculo):
         return random.randint(2, 4)
 
 def generateColorArray():
-    colores = []
-    colores = [pickColors() for row in range(random.randint(1,4))]
+    colores = pickColors(random.randint(1,4))
 
     return colores
 
-def pickColors():
+def pickColors(num_colors):
     common_colors = [
-        ('Blanco', '#FFFFFF', 5),
-        ('Negro', '#000000', 3),
-        ('Gris Claro', '#D3D3D3', 4),
-        ('Gris Medio', '#808080', 4),
-        ('Gris Oscuro', '#696969', 4),
-        ('Gris Azulado', '#708090', 4),
-        ('Plata', '#C0C0C0', 3),
-        ('Blanco Perla', '#F8F8FF', 5),
-        ('Blanco Nieve', '#FFFAFA', 5),
-        ('Negro Noche', '#2F2F2F', 3),
-        ('Negro Azabache', '#0D0D0D', 3),
-        ('Rojo Oscuro', '#8B0000', 2),
-        ('Azul Oscuro', '#00008B', 2),
-        ('Verde Oscuro', '#006400', 1),
-        ('Amarillo Oscuro', '#8B8B00', 1),
-        ('Naranja Oscuro', '#FF8C00', 1),
-        ('Marrón Oscuro', '#8B4513', 2),
-        ('Beige', '#F5F5DC', 2),
-        ('Dorado', '#FFD700', 1),
-        ('Celeste', '#87CEEB', 1),
-        ('Turquesa', '#40E0D0', 1)
+        ('Blanco', '#FFFFFF'),
+        ('Negro', '#000000'),
+        ('Gris Claro', '#D3D3D3'),
+        ('Gris Medio', '#808080'),
+        ('Gris Oscuro', '#696969'),
+        ('Gris Azulado', '#708090'),
+        ('Plata', '#C0C0C0'),
+        ('Blanco Perla', '#F8F8FF'),
+        ('Blanco Nieve', '#FFFAFA'),
+        ('Negro Noche', '#2F2F2F'),
+        ('Negro Azabache', '#0D0D0D'),
+        ('Rojo Oscuro', '#8B0000'),
+        ('Azul Oscuro', '#00008B'),
+        ('Marrón Oscuro', '#8B4513'),
+        ('Beige', '#F5F5DC')
     ]
 
-    # Extract colors and weights into separate lists
-    colors, hex_values, weights = zip(*common_colors)
+    colores = []
 
-    # Select colors based on the distribution
-    selected_color = random.choices(colors, weights=weights, k=1)
 
-    # Retrieve the hex values for the selected colors
-    selected_hex_values = [hex_values[colors.index(color)] for color in selected_color]
+    for i in range(num_colors):
+        # Extract colors and hex values into separate lists
+        colors, hex_values = zip(*common_colors)
+        
+        # Select colors based on the distribution
+        selected_color = random.sample(colors, k=1)
 
-    imagenes = generate_dummy_links()
+        # Retrieve the hex values for the selected colors
+        selected_hex_values = [hex_values[colors.index(color)] for color in selected_color]
 
-    colores = {'nombre': selected_color[0], 'valor_hexadecimal': selected_hex_values[0], 'imagenes': imagenes}
+        imagenes = generate_dummy_links() # TODO take the scraped image from Kavak
+
+        color = {'nombre': selected_color[0], 'valor_hexadecimal': selected_hex_values[0], 'imagenes': imagenes}
+
+        colores.append(color)
 
     return colores
 
@@ -186,7 +191,7 @@ def pickCharacteristics():
         "Sistema de frenado regenerativo"
     ]
 
-    return random.choices(caracteristicas_auto, k=random.randint(1,5))
+    return random.sample(caracteristicas_auto, random.randint(1,5))
 
 def generateExtras():
     extras = [
@@ -347,7 +352,7 @@ def generateExtras():
         }
     ]
 
-    return random.choices(extras, k=random.randint(1,5))
+    return random.sample(extras, random.randint(1,5))
 
 def generateEnganche():
     enganches = [
@@ -360,13 +365,17 @@ def generateEnganche():
         40
     ]
 
-    return random.choices(enganches, k=random.randint(1,5))
+    # Make a list with a random number of enganches and then sort it
+    finalEnganches = random.sample(enganches, random.randint(1,5))
+    finalEnganches.sort()
+
+    return finalEnganches
 
 def generatePlazos():
     # Generate a single one decimal float between 4 and 6
     interest_rate = round(random.uniform(4, 6), 1)
     # Generate a random interest rate for each plazo based on the interest rate that rises 0.1% for each plazo
-    plazos = {
+    plazo = {
         "12": interest_rate,
         "24": interest_rate + 0.1,
         "36": interest_rate + 0.2,
@@ -374,7 +383,7 @@ def generatePlazos():
         "60": interest_rate + 0.6
     }
 
-    return plazos
+    return plazo
         
 def generateEntrega():
     entrega = [
@@ -390,7 +399,7 @@ def generateEntrega():
     }
   ]
     
-    return random.choice(entrega)
+    return entrega
 
 
 generateRandomCar()
