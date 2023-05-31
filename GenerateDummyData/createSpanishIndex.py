@@ -47,7 +47,7 @@ def createIndex(index_name):
     # Define the index mappings
     mappings = {
         "properties": {
-            "your_field_name": {
+            "descripcion": {
                 "type": "text",
                 "analyzer": "spanish_analyzer"
             }
@@ -61,11 +61,12 @@ def queryIndex(index_name, prompt):
     # Define the query
     query = {
         "query": {
-            "match": {
-                "content": prompt
+            "multi_match": {
+            "query": prompt,
+            "fields": ["descripcion", "colores", "marca"],
+            "minimum_should_match": "2"
             }
-        },
-        "size": 20  # Retrieve at least 20 results
+        }
     }
 
     # Query the index
@@ -74,4 +75,6 @@ def queryIndex(index_name, prompt):
     # Return the results
     return results
 
-print(queryIndex('autos', 'Auto familiar con calefacción y aire acondicionado.'))
+prompt = 'De carreras, con motor de alto rendimineto, deportivo'
+print(f"Prompt: {prompt}")
+print(queryIndex('autos', prompt))
