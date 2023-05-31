@@ -1,5 +1,6 @@
 import random
 import pandas as pd
+import ast
 
 def generateRandomCar():
     # Read the csv file into a pandas dataframe
@@ -36,6 +37,29 @@ def generateRandomCar():
 
 
     df.to_csv('./GenerateDummyData/newScraped.csv', index=False)
+
+def addIds():
+    df = pd.read_csv('./GenerateDummyData/descriptionsImages.csv')
+
+    # Set the data type of the color column to a list
+    df['colores'] = df['colores'].apply(lambda x: eval(x))
+
+    df['agencia_id'] = '6475ce431870c4941b667158'
+
+    df['gerente_id'] = '6475d196b0304a50ba2a3113'
+
+    # For each row, fill the fotos_3d column with the 'imagenes' field of the first dictionary in the colors column list
+    df['fotos_3d'] = [[row[0]['imagenes']] for row in df['colores']]
+
+    # Iterate through each dictionary in the colores column list
+    for row in df['colores']:
+        # Iterate through each dictionary in the list
+        for color in row:
+            # Set the 'imagenes' string inside a list
+            color['imagenes'] = [color['imagenes']]
+    
+
+    df.to_csv('./GenerateDummyData/finalScraped.csv', index=False)
 
 
 def pickRandomMotor(motorType):
@@ -402,4 +426,4 @@ def generateEntrega():
     return entrega
 
 
-generateRandomCar()
+addIds()

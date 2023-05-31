@@ -14,7 +14,7 @@ cloud_id = env_vars['CLOUD_ID']
 client = Elasticsearch(api_key=api_key, cloud_id=cloud_id)
 
 # Reading the CSV file with explicit encoding
-df = pd.read_csv('./GenerateDummyData/conjunto32.csv')
+df = pd.read_csv('./GenerateDummyData/finalScraped.csv')
 
 # Converting the dataframe to a dictionary
 data = df.to_dict(orient='records')
@@ -25,3 +25,11 @@ data_json = json.dumps(data, indent=4, ensure_ascii=False)
 # Save the json data to a file with explicit encoding
 with open('./GenerateDummyData/conjunto32.json', 'w', encoding='utf-8') as f:
     f.write(data_json)
+
+# Specify the index name
+index_name = 'autos'
+
+# For each document in the data
+for doc in data:
+    # Index the document
+    client.index(index=index_name, body=json.dumps(doc))
