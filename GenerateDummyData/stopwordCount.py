@@ -53,10 +53,31 @@ def getStopWordsProportion():
     # Save the dataframe to a CSV file
     df.to_csv('./GenerateDummyData/stopWordProportions.csv', index=False)
 
-getStopWordsProportion()
+def getDescriptionWordCount():
+    # Read the CSV file
+    df = pd.read_csv('./GenerateDummyData/finalScrapedExpandedDescription_20230531201457.csv')
 
-# Example usage
-""" text = "El perro está corriendo en el parque."
-stopwords_count, non_stopwords_count = count_stopwords(text)
-print("Stopwords:", stopwords_count)
-print("Non-stopwords:", non_stopwords_count) """
+    # Initialize the word count column
+    df['description_word_count'] = 0
+
+    # For each row in the dataframe
+    for index, row in df.iterrows():
+        # Get the description
+        description = row['descripcion']
+
+        # Count the words in the description
+        word_count = len(description.split())
+
+        # Add the word count to the dataframe
+        df.loc[index, 'description_word_count'] = word_count
+
+    # Get the average word count
+    average_word_count = df['description_word_count'].mean()
+
+    # Print the average word count
+    print(f"Average word count: {average_word_count}")
+
+    # Save the dataframe to a CSV file
+    df.to_csv('./GenerateDummyData/descriptionWordCount.csv', index=False)
+
+getDescriptionWordCount()
