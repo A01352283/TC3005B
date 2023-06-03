@@ -75,6 +75,8 @@ def queryIndex(index_name, prompt):
     # Return the results
     return results
 
-prompt = 'De carreras, con motor de alto rendimineto, deportivo'
+""" prompt = 'De carreras, con motor de alto rendimineto, deportivo'
 print(f"Prompt: {prompt}")
-print(queryIndex('autos', prompt))
+print(queryIndex('autos', prompt)) """
+
+createIndex(index_name)

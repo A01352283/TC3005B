@@ -14,7 +14,7 @@ cloud_id = env_vars['CLOUD_ID']
 client = Elasticsearch(api_key=api_key, cloud_id=cloud_id)
 
 # Reading the CSV file with explicit encoding
-df = pd.read_csv('./GenerateDummyData/finalScraped.csv')
+df = pd.read_csv('./GenerateDummyData/finalScrapedExpandedDescription_20230531201457.csv')
 
 # Converting the dataframe to a dictionary
 data = df.to_dict(orient='records')

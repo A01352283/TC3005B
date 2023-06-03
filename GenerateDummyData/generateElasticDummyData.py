@@ -1,6 +1,6 @@
 import random
 import pandas as pd
-import ast
+from datetime import datetime
 
 def generateRandomCar():
     # Read the csv file into a pandas dataframe
@@ -60,7 +60,6 @@ def addIds():
     
 
     df.to_csv('./GenerateDummyData/finalScraped.csv', index=False)
-
 
 def pickRandomMotor(motorType):
     motors = []
@@ -425,5 +424,31 @@ def generateEntrega():
     
     return entrega
 
+# Adds info from other columns to the description column
+def updateDescription():
+    df = pd.read_csv("./GenerateDummyData/finalScraped.csv")
 
-addIds()
+    # Set the data type of the color column to a list
+    df['colores'] = df['colores'].apply(lambda x: eval(x))
+
+    # Set the data type of the extras column to a list
+    df['extras'] = df['extras'].apply(lambda x: eval(x))
+    
+    # Motor, pasajeros, colores, extras are the fields to be added to the description
+    # For each row, add the motor to the description following the format f"Motor: {motor}"
+    df['descripcion'] = df['descripcion'] + df['motor'].apply(lambda x: f" Motor {x} ")
+
+    # For each row, add the pasajeros to the description following the format f"Pasajeros: {pasajeros}"
+    df['descripcion'] = df['descripcion'] + df['pasajeros'].apply(lambda x: f"{x} pasajeros ")
+
+    # Get each 'nombre' value from the list of dictionaries of the 'colores' column and add the colors to the description following the format f"Colores: {colores}"
+    df['descripcion'] = df['descripcion'] + df['colores'].apply(lambda x: f"Colores: {', '.join([color['nombre'] for color in x])} ")
+
+    # Get each 'titulo' value from the list of dictionaries of the 'extras' column and add the extras to the description following the format f"Extras: {extras}"
+    df['descripcion'] = df['descripcion'] + df['extras'].apply(lambda x: f"Extras: {', '.join([extra['titulo'] for extra in x])}.")
+
+    # Save the dataframe to a csv file with the date appended at the end
+    df.to_csv(f"./GenerateDummyData/finalScrapedExpandedDescription_{datetime.now().strftime('%Y%m%d%H%M%S')}.csv", index=False)
+    
+
+updateDescription()
