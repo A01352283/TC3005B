@@ -4,14 +4,14 @@ from dotenv import dotenv_values
 # Load the environment variables
 env_vars = dotenv_values('./GenerateDummyData/.env')
 
-api_key = env_vars['API_KEY']
+api_key = env_vars['API_KEY_AUTOS_PRUEBA']
 cloud_id = env_vars['CLOUD_ID']
 
 # Create a connection to Elasticsearch
 es = Elasticsearch(api_key=api_key, cloud_id=cloud_id)
 
 # Specify the index name
-index_name = 'autos'
+index_name = 'autos_prueba'
 
 def createIndex(index_name):
     # Define the index settings with BM25 similarity
@@ -50,9 +50,33 @@ def createIndex(index_name):
             "descripcion": {
                 "type": "text",
                 "analyzer": "spanish_analyzer"
+            },
+            "colores": {
+                "type": "nested",
+                "properties": {
+                "nombre": { "type": "text" },
+                "valor_hexadecimal": { "type": "keyword" },
+                "imagenes": { "type": "text" }
+                }
             }
         }
     }
+
+    {
+        "mappings": {
+            "properties": {
+                "colores": {
+                    "type": "nested",
+                    "properties": {
+                    "nombre": { "type": "text" },
+                    "valor_hexadecimal": { "type": "keyword" },
+                    "imagenes": { "type": "text" }
+                    }
+                }
+            }
+        }
+    }
+
 
     # Create the index with settings and mappings
     es.indices.create(index=index_name, body={"settings": settings, "mappings": mappings})
