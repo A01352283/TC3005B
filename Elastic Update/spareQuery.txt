@@ -1,0 +1,15 @@
+query = {
+    "query": {
+        "match_all": {},
+           "script": {
+            "source": "for (def item: params.items) { ctx._source.entrega.add(item) }",
+            "lang": "painless",
+            "params": {
+                "items": [
+                    {"nombre": "Domicilio", "precio": 8931, "descripcion": "Lo llevamos a la puerta de tu casa"}, 
+                    {"nombre": "Recoger en Agencia", "precio": 0.0, "descripcion": "Recoge tu auto en la agencia GRATIS"}
+                ]
+            } 
+        }
+    }
+}

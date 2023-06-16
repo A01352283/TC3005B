@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+node_modules/
+```
+Elastic Cloud/config/default.json
+package-lock.json
+
